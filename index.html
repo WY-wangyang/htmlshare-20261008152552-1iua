@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- CSP：阻止托管平台注入的外部脚本（如 hostbar.js 悬浮广告组件） -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'">
+<title>文件下载</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* 隐藏托管平台注入的 "Hosted on HTML Hoster" 底部链接 */
+    a[href^="https://htmlhoster.com/?ref="] { display: none !important; }
+    div:has(> a[href^="https://htmlhoster.com/?ref="]) { display: none !important; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+        font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+        background: #ffffff;
+        min-height: 100vh;
+        padding: 24px 16px;
+    }
+    .container {
+        max-width: 680px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 16px 8px;
+    }
+    h1 { font-size: 24px; color: #1e293b; text-align: center; margin-bottom: 18px; }
+    .text-content { font-size: 15px; line-height: 1.8; color: #334155; margin-bottom: 16px; white-space: normal; }
+    .tip {
+        background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8;
+        border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-top: 18px;
+    }
+    .tip b { color: #1e40af; }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>文件下载</h1>
+        
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;margin:10px 0;"><div style="min-width:0;"><div style="font-size:15px;font-weight:600;color:#1e293b;word-break:break-all;">HowToLiveBetter.pdf</div><div style="font-size:12px;color:#64748b;margin-top:2px;">8.2 MB · 原始文件（原格式直下）</div></div><a href="./HowToLiveBetter.pdf" download="HowToLiveBetter.pdf" style="flex-shrink:0;background:#2563eb;color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:9px 18px;border-radius:8px;display:inline-block;">&#11015; 下载源文件</a></div>
+        <div class="tip">&#128230; 该内容为<b>文件下载页</b>：点击上方「下载源文件」按钮即可下载<b>原始文件</b>（原格式、未压缩、未转换，与原文件完全一致）。</div>
+    </div>
+</body>
+</html>
